@@ -5,12 +5,6 @@
 [![npm version](https://badge.fury.io/js/@sendbird%2Flive.svg)](https://badge.fury.io/js/@sendbird%2Flive-uikit-react)
 [![Commercial License](https://img.shields.io/badge/license-Commercial-brightgreen.svg)](https://github.com/sendbird/sendbird-live-uikit-react/blob/master/LICENSE.md)
 
-# Start your first live
-
-Sendbird UIKit for Live is a set of prebuilt UI components that allows you to easily craft an in-app livestream with the essential streaming features including real-time chat. Our development kit includes UI components which you can customize to create an engaging live event experience for users. 
-
-Follow the guide below to start your live event with our easy to use UI components by using `React`. This library isn't designed to work with other frameworks such as `Vue` or `Angular`. If you would like to build using the Live SDK only, refer to the [Sendbird Live SDK](host overview) page. 
-
 ---
 
 ## Requirements
