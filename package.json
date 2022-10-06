@@ -1,0 +1,27 @@
+{
+  "name": "@sendbird/live-uikit-react",
+  "version": "v1.0.0-beta",
+  "description": "Sendbird Live UIKit for React allows you to create customizable views and execute essential live functions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendbird/sendbird-live-uikit-react"
+  },
+  "keywords": [
+    "sendbird",
+    "sendbird.com",
+    "live",
+    "js",
+    "react"
+  ],
+  "author": "SendBird <support@sendbird.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/sendbird/sendbird-live-uikit-react/issues"
+  },
+  "homepage": "https://sendbird.com"
+}
