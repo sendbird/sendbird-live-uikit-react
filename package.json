@@ -1,6 +1,6 @@
 {
   "name": "@sendbird/live-uikit-react",
-  "version": "v1.0.0-beta",
+  "version": "v1.0.0-beta.2",
   "description": "Sendbird Live UIKit for React allows you to create customizable views and execute essential live functions",
   "main": "index.js",
   "types": "index.d.ts",
