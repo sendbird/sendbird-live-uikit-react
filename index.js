@@ -346,7 +346,7 @@ var sendbirdLive_min = {exports: {}};
 
 	  function F(e) {
 	    return function (e) {
-	      if (Array.isArray(e)) return G(e);
+	      if (Array.isArray(e)) return H(e);
 	    }(e) || function (e) {
 	      if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e);
 	    }(e) || j(e) || function () {
@@ -356,13 +356,13 @@ var sendbirdLive_min = {exports: {}};
 
 	  function j(e, t) {
 	    if (e) {
-	      if ("string" == typeof e) return G(e, t);
+	      if ("string" == typeof e) return H(e, t);
 	      var n = Object.prototype.toString.call(e).slice(8, -1);
-	      return "Map" === (n = "Object" === n && e.constructor ? e.constructor.name : n) || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? G(e, t) : void 0;
+	      return "Map" === (n = "Object" === n && e.constructor ? e.constructor.name : n) || "Set" === n ? Array.from(e) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? H(e, t) : void 0;
 	    }
 	  }
 
-	  function G(e, t) {
+	  function H(e, t) {
 	    (null == t || t > e.length) && (t = e.length);
 
 	    for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
@@ -370,7 +370,7 @@ var sendbirdLive_min = {exports: {}};
 	    return r;
 	  }
 
-	  function H(e, t) {
+	  function G(e, t) {
 	    var n,
 	        r = "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
 
@@ -870,7 +870,7 @@ var sendbirdLive_min = {exports: {}};
 	  }
 
 	  function ye(e) {
-	    return Ht(Gt(e));
+	    return Gt(Ht(e));
 	  }
 
 	  function me(e) {
@@ -974,7 +974,7 @@ var sendbirdLive_min = {exports: {}};
 	  }
 
 	  function De(e, t) {
-	    return (e = Vr[Hr(e)]) == Kr || e != Br && (jr(t) ? Fr(t) : !!t);
+	    return (e = Vr[Gr(e)]) == Kr || e != Br && (jr(t) ? Fr(t) : !!t);
 	  }
 
 	  function Me(e, t) {
@@ -1079,8 +1079,8 @@ var sendbirdLive_min = {exports: {}};
 	    });
 	  }
 
-	  var Ge,
-	      He,
+	  var He,
+	      Ge,
 	      Ve,
 	      Be,
 	      Ke,
@@ -1191,7 +1191,7 @@ var sendbirdLive_min = {exports: {}};
 	      Ft = "__core-js_shared__",
 	      t = K[Ft] || t(Ft, {}),
 	      jt = t,
-	      Gt = ((Et.exports = function (e, t) {
+	      Ht = ((Et.exports = function (e, t) {
 	    return jt[e] || (jt[e] = void 0 !== t ? t : {});
 	  })("versions", []).push({
 	    version: "3.23.4",
@@ -1200,7 +1200,7 @@ var sendbirdLive_min = {exports: {}};
 	    license: "https://github.com/zloirock/core-js/blob/v3.23.4/LICENSE",
 	    source: "https://github.com/zloirock/core-js"
 	  }), ue),
-	      Ht = Object,
+	      Gt = Object,
 	      Vt = ye,
 	      Bt = et({}.hasOwnProperty),
 	      Ft = Object.hasOwn || function (e, t) {
@@ -1314,34 +1314,34 @@ var sendbirdLive_min = {exports: {}};
 	  },
 	      Jt = le,
 	      jn = t,
-	      Gn = et(Function.toString),
+	      Hn = et(Function.toString),
 	      Fn = (Jt(jn.inspectSource) || (jn.inspectSource = function (e) {
-	    return Gn(e);
+	    return Hn(e);
 	  }), jn.inspectSource),
 	      Jt = le,
 	      jn = Fn,
-	      Hn = K.WeakMap,
-	      Jt = Jt(Hn) && /native code/.test(jn(Hn)),
+	      Gn = K.WeakMap,
+	      Jt = Jt(Gn) && /native code/.test(jn(Gn)),
 	      jn = Et.exports,
 	      Vn = me,
 	      Bn = jn("keys"),
-	      Hn = {},
+	      Gn = {},
 	      jn = et,
 	      Kn = he,
 	      Qn = mt,
 	      zn = Ft,
 	      Wn = Te,
-	      r = Hn,
+	      r = Gn,
 	      Yn = "Object already initialized",
 	      Xn = K.TypeError,
 	      Jn = K.WeakMap,
-	      Jt = (ze = Jt || t.state ? (Ge = t.state || (t.state = new Jn()), He = jn(Ge.get), Ve = jn(Ge.has), Be = jn(Ge.set), Ke = function (e, t) {
-	    if (Ve(Ge, e)) throw new Xn(Yn);
-	    return t.facade = e, Be(Ge, e, t), t;
+	      Jt = (ze = Jt || t.state ? (He = t.state || (t.state = new Jn()), Ge = jn(He.get), Ve = jn(He.has), Be = jn(He.set), Ke = function (e, t) {
+	    if (Ve(He, e)) throw new Xn(Yn);
+	    return t.facade = e, Be(He, e, t), t;
 	  }, Qe = function (e) {
-	    return He(Ge, e) || {};
+	    return Ge(He, e) || {};
 	  }, function (e) {
-	    return Ve(Ge, e);
+	    return Ve(He, e);
 	  }) : (r[We = Wn("state")] = !0, Ke = function (e, t) {
 	    if (zn(e, We)) throw new Xn(Yn);
 	    return t.facade = e, Qn(e, We, t), t;
@@ -1425,7 +1425,7 @@ var sendbirdLive_min = {exports: {}};
 	      Tr = Ft,
 	      Sr = ce,
 	      Cr = r.indexOf,
-	      kr = Hn,
+	      kr = Gn,
 	      Nr = Wn([].push),
 	      t = ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "toLocaleString", "toString", "valueOf"],
 	      Ar = Re,
@@ -1449,9 +1449,9 @@ var sendbirdLive_min = {exports: {}};
 	      qr = Yt,
 	      Fr = te,
 	      jr = le,
-	      Gr = /#|\.prototype\./,
-	      Hr = De.normalize = function (e) {
-	    return String(e).replace(Gr, ".").toLowerCase();
+	      Hr = /#|\.prototype\./,
+	      Gr = De.normalize = function (e) {
+	    return String(e).replace(Hr, ".").toLowerCase();
 	  },
 	      Vr = De.data = {},
 	      Br = De.NATIVE = "N",
@@ -1633,7 +1633,7 @@ var sendbirdLive_min = {exports: {}};
 	      startedBy: e.started_by,
 	      endedBy: e.ended_by,
 	      duration: e.duration,
-	      host: e.host ? Gi(e.host) : void 0,
+	      host: e.host ? Hi(e.host) : void 0,
 	      participantCount: e.participant_count,
 	      peakParticipantCount: e.peak_participant_count,
 	      cumulativeParticipantCount: e.cumulative_participant_count,
@@ -1644,7 +1644,7 @@ var sendbirdLive_min = {exports: {}};
 	    };
 	  }
 
-	  function Gi(e) {
+	  function Hi(e) {
 	    return {
 	      hostId: e.host_id,
 	      userId: e.user.user_id,
@@ -1662,7 +1662,7 @@ var sendbirdLive_min = {exports: {}};
 	    };
 	  }
 
-	  function Hi(e) {
+	  function Gi(e) {
 	    return {
 	      id: e.rtcstream_id
 	    };
@@ -1992,10 +1992,10 @@ var sendbirdLive_min = {exports: {}};
 	              break;
 
 	            case 2:
-	              return r = new ks(this.params, t, n), e.next = 5, this.sender.send(r);
+	              return this.isLoading = !0, r = new ks(this.params, t, n), e.next = 6, this.sender.send(r);
 
-	            case 5:
-	              return r = e.sent, i = r.payload, this.isLoading = !0, this.prevToken = i.prev, this.nextToken = i.next, this.isLoading = !1, e.abrupt("return", i.liveEvents);
+	            case 6:
+	              return r = e.sent, i = r.payload, this.prevToken = i.prev, this.nextToken = i.next, this.isLoading = !1, e.abrupt("return", i.liveEvents);
 
 	            case 12:
 	            case "end":
@@ -2038,9 +2038,9 @@ var sendbirdLive_min = {exports: {}};
 	      hs = de("document", "documentElement"),
 	      Fs = we,
 	      js = ds,
-	      Gs = t,
-	      i = Hn,
-	      Hs = hs,
+	      Hs = t,
+	      i = Gn,
+	      Gs = hs,
 	      Vs = Ie,
 	      Bs = "prototype",
 	      Ks = "script",
@@ -2053,9 +2053,9 @@ var sendbirdLive_min = {exports: {}};
 	      Us = new ActiveXObject("htmlfile");
 	    } catch (e) {}
 
-	    Ws = "undefined" == typeof document || document.domain && Us ? Ls(Us) : (e = Vs("iframe"), t = "java" + Ks + ":", e.style.display = "none", Hs.appendChild(e), e.src = String(t), (t = e.contentWindow.document).open(), t.write(zs("document.F=Object")), t.close(), t.F);
+	    Ws = "undefined" == typeof document || document.domain && Us ? Ls(Us) : (e = Vs("iframe"), t = "java" + Ks + ":", e.style.display = "none", Gs.appendChild(e), e.src = String(t), (t = e.contentWindow.document).open(), t.write(zs("document.F=Object")), t.close(), t.F);
 
-	    for (var e, t, n = Gs.length; n--;) delete Ws[Bs][Gs[n]];
+	    for (var e, t, n = Hs.length; n--;) delete Ws[Bs][Hs[n]];
 
 	    return Ws();
 	  },
@@ -2132,7 +2132,7 @@ var sendbirdLive_min = {exports: {}};
 	  function da(e, t, n, r, i, s, a) {
 	    function o(e) {
 	      if (e === i && f) return f;
-	      if (!Ga && e in h) return h[e];
+	      if (!Ha && e in h) return h[e];
 
 	      switch (e) {
 	        case "keys":
@@ -2154,21 +2154,21 @@ var sendbirdLive_min = {exports: {}};
 	        r = t + " Iterator",
 	        l = !1,
 	        h = e.prototype,
-	        d = h[Ha] || h["@@iterator"] || i && h[i],
-	        f = !Ga && d || o(i),
+	        d = h[Ga] || h["@@iterator"] || i && h[i],
+	        f = !Ha && d || o(i),
 	        p = "Array" == t && h.entries || d;
-	    if (p && (p = Da(p.call(new e()))) !== Object.prototype && p.next && (Da(p) !== ja && (Ma ? Ma(p, ja) : Oa(p[Ha]) || Pa(p, Ha, ha)), xa(p, r, !0)), qa && i == Va && d && d.name !== Va && (Fa ? La(h, "name", Va) : (l = !0, f = function () {
+	    if (p && (p = Da(p.call(new e()))) !== Object.prototype && p.next && (Da(p) !== ja && (Ma ? Ma(p, ja) : Oa(p[Ga]) || Pa(p, Ga, ha)), xa(p, r, !0)), qa && i == Va && d && d.name !== Va && (Fa ? La(h, "name", Va) : (l = !0, f = function () {
 	      return Aa(d, this);
 	    })), i) if (u = {
 	      values: o(Va),
 	      keys: s ? f : o("keys"),
 	      entries: o(Ba)
-	    }, a) for (c in u) !Ga && !l && c in h || Pa(h, c, u[c]);else Na({
+	    }, a) for (c in u) !Ha && !l && c in h || Pa(h, c, u[c]);else Na({
 	      target: t,
 	      proto: !0,
-	      forced: Ga || l
+	      forced: Ha || l
 	    }, u);
-	    return h[Ha] !== f && Pa(h, Ha, f, {
+	    return h[Ga] !== f && Pa(h, Ga, f, {
 	      name: i
 	    }), Ua[t] = f, u;
 	  }
@@ -2233,8 +2233,8 @@ var sendbirdLive_min = {exports: {}};
 	      qa = n.PROPER,
 	      Fa = n.CONFIGURABLE,
 	      ja = fa.IteratorPrototype,
-	      Ga = fa.BUGGY_SAFARI_ITERATORS,
-	      Ha = Kt("iterator"),
+	      Ha = fa.BUGGY_SAFARI_ITERATORS,
+	      Ga = Kt("iterator"),
 	      Va = "values",
 	      Ba = "entries",
 	      Ka = ce,
@@ -2339,7 +2339,7 @@ var sendbirdLive_min = {exports: {}};
 	  }),
 	      lo = Me,
 	      ho = et,
-	      i = Hn,
+	      i = Gn,
 	      fo = he,
 	      po = Ft,
 	      vo = Yt.f,
@@ -2470,8 +2470,8 @@ var sendbirdLive_min = {exports: {}};
 	      qo = fe,
 	      Fo = To,
 	      jo = TypeError,
-	      Go = Ze,
-	      Ho = we,
+	      Ho = Ze,
+	      Go = we,
 	      Vo = ve,
 	      Bo = xe,
 	      Ko = Ze,
@@ -2490,7 +2490,7 @@ var sendbirdLive_min = {exports: {}};
 	      Zo = To,
 	      $o = function (e, t, n) {
 	    var r, i;
-	    Ho(e);
+	    Go(e);
 
 	    try {
 	      if (!(r = Vo(e, "return"))) {
@@ -2498,14 +2498,14 @@ var sendbirdLive_min = {exports: {}};
 	        return n;
 	      }
 
-	      r = Go(r, e);
+	      r = Ho(r, e);
 	    } catch (e) {
 	      i = !0, r = e;
 	    }
 
 	    if ("throw" === t) throw n;
 	    if (i) throw r;
-	    return Ho(r), n;
+	    return Go(r), n;
 	  },
 	      eu = TypeError,
 	      tu = So.prototype,
@@ -2625,8 +2625,8 @@ var sendbirdLive_min = {exports: {}};
 	  },
 	      Fu = xe,
 	      ju = ko,
-	      Gu = Co,
-	      Hu = da,
+	      Hu = Co,
+	      Gu = da,
 	      Vu = lu,
 	      Bu = e,
 	      Ku = n.exports.fastKey,
@@ -2718,7 +2718,7 @@ var sendbirdLive_min = {exports: {}};
 	          first: void 0,
 	          last: void 0,
 	          size: 0
-	        }), Bu || (e.size = 0), null != t && Gu(t, e[i], {
+	        }), Bu || (e.size = 0), null != t && Hu(t, e[i], {
 	          that: e,
 	          AS_ENTRIES: r
 	        });
@@ -2766,7 +2766,7 @@ var sendbirdLive_min = {exports: {}};
 	      var r = t + " Iterator",
 	          i = zu(t),
 	          s = zu(r);
-	      Hu(e, t, function (e, t) {
+	      Gu(e, t, function (e, t) {
 	        Qu(this, {
 	          type: r,
 	          target: e,
@@ -2799,11 +2799,11 @@ var sendbirdLive_min = {exports: {}};
 	      Ju = fa("".charAt),
 	      Zu = fa("".charCodeAt),
 	      $u = fa("".slice),
-	      Hn = {
+	      Gn = {
 	    codeAt: hu(!1),
 	    charAt: hu(!0)
 	  },
-	      ec = Hn.charAt,
+	      ec = Gn.charAt,
 	      tc = zi,
 	      aa = Jt,
 	      t = da,
@@ -3099,7 +3099,7 @@ var sendbirdLive_min = {exports: {}};
 	      }
 	    }]), r;
 	  }(),
-	      Gc = function () {
+	      Hc = function () {
 	    g(t, Fi);
 	    var e = b(t);
 
@@ -3116,7 +3116,7 @@ var sendbirdLive_min = {exports: {}};
 	      }
 	    }]), t;
 	  }(),
-	      Hc = function () {
+	      Gc = function () {
 	    g(i, Ui);
 	    var r = b(i);
 
@@ -3160,7 +3160,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3289,7 +3289,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3461,7 +3461,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          endpoint: Hi(e.rtcstream)
+	          endpoint: Gi(e.rtcstream)
 	        };
 	      }
 	    }]), t;
@@ -3504,7 +3504,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          endpoint: Hi(e.rtcstream)
+	          endpoint: Gi(e.rtcstream)
 	        };
 	      }
 	    }]), t;
@@ -3631,7 +3631,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          endpoint: Hi(e.rtcstream)
+	          endpoint: Gi(e.rtcstream)
 	        };
 	      }
 	    }]), t;
@@ -3714,7 +3714,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3732,7 +3732,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3750,7 +3750,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3768,7 +3768,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3786,7 +3786,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -3876,7 +3876,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          sdp: e.sdp,
-	          endpoint: Hi(e.rtcstream)
+	          endpoint: Gi(e.rtcstream)
 	        };
 	      }
 	    }]), t;
@@ -3893,7 +3893,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "parseData",
 	      value: function (e) {
 	        return {
-	          hosts: e.hosts.map(Gi)
+	          hosts: e.hosts.map(Hi)
 	        };
 	      }
 	    }]), t;
@@ -3982,7 +3982,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          sdp: e.sdp,
-	          endpoint: Hi(e.rtcstream)
+	          endpoint: Gi(e.rtcstream)
 	        };
 	      }
 	    }]), t;
@@ -4114,7 +4114,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        return {
 	          liveEventId: e.live_event_id,
-	          host: Gi(e.host)
+	          host: Hi(e.host)
 	        };
 	      }
 	    }]), t;
@@ -4246,7 +4246,7 @@ var sendbirdLive_min = {exports: {}};
 	      }
 	    }]), i;
 	  }(),
-	      Gl = function () {
+	      Hl = function () {
 	    g(t, dl);
 	    var e = b(t);
 
@@ -4266,7 +4266,7 @@ var sendbirdLive_min = {exports: {}};
 	      }
 	    }]), t;
 	  }(),
-	      Hl = function () {
+	      Gl = function () {
 	    g(t, dl);
 	    var e = b(t);
 
@@ -4314,7 +4314,7 @@ var sendbirdLive_min = {exports: {}};
 	    }, {
 	      key: "createEnterHost",
 	      value: function (e, t) {
-	        return new Hc(e, t);
+	        return new Gc(e, t);
 	      }
 	    }, {
 	      key: "createReady",
@@ -4425,7 +4425,7 @@ var sendbirdLive_min = {exports: {}};
 	              return new Fc(t);
 
 	            case u.GET:
-	              return new Gc(t);
+	              return new Hc(t);
 
 	            case u.DELETE:
 	              return new Jc(t);
@@ -4491,10 +4491,10 @@ var sendbirdLive_min = {exports: {}};
 	              return new hl(t);
 
 	            case u.CUSTOM_ITEMS_UPDATE:
-	              return new Gl(t);
+	              return new Hl(t);
 
 	            case u.CUSTOM_ITEMS_DELETE:
-	              return new Hl(t);
+	              return new Gl(t);
 	          }
 	        } catch (e) {
 	          return;
@@ -4795,7 +4795,7 @@ var sendbirdLive_min = {exports: {}};
 	        for (var t = arguments.length, n = new Array(1 < t ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
 
 	        var i,
-	            s = H(this._listeners);
+	            s = G(this._listeners);
 
 	        try {
 	          for (s.s(); !(i = s.n()).done;) {
@@ -4872,11 +4872,11 @@ var sendbirdLive_min = {exports: {}};
 	      qh = ua("".charAt),
 	      Fh = ua("".indexOf),
 	      jh = ua("".replace),
-	      Gh = ua("".slice),
-	      Hh = (Wn = /b*/g, Oh(Ph, i = /a/, "a"), Oh(Ph, Wn, "a"), 0 !== i.lastIndex || 0 !== Wn.lastIndex),
+	      Hh = ua("".slice),
+	      Gh = (Wn = /b*/g, Oh(Ph, i = /a/, "a"), Oh(Ph, Wn, "a"), 0 !== i.lastIndex || 0 !== Wn.lastIndex),
 	      Vh = Jn.BROKEN_CARET,
 	      Bh = void 0 !== /()??/.exec("")[1],
-	      Kt = Uh = Hh || Bh || Vh || aa || t ? function (e) {
+	      Kt = Uh = Gh || Bh || Vh || aa || t ? function (e) {
 	    var t,
 	        n,
 	        r,
@@ -4894,7 +4894,7 @@ var sendbirdLive_min = {exports: {}};
 	        u = o.source,
 	        d = 0,
 	        f = e;
-	    if (c && (h = jh(h, "y", ""), -1 === Fh(h, "g") && (h += "g"), f = Gh(e, o.lastIndex), 0 < o.lastIndex && (!o.multiline || o.multiline && "\n" !== qh(e, o.lastIndex - 1)) && (u = "(?: " + u + ")", f = " " + f, d++), t = new RegExp("^(?:" + u + ")", h)), Bh && (t = new RegExp("^" + u + "$(?!\\s)", h)), Hh && (n = o.lastIndex), r = Oh(Ph, c ? t : o, f), c ? r ? (r.input = Gh(r.input, d), r[0] = Gh(r[0], d), r.index = o.lastIndex, o.lastIndex += r[0].length) : o.lastIndex = 0 : Hh && r && (o.lastIndex = o.global ? r.index + r[0].length : n), Bh && r && 1 < r.length && Oh(Lh, r[0], t, function () {
+	    if (c && (h = jh(h, "y", ""), -1 === Fh(h, "g") && (h += "g"), f = Hh(e, o.lastIndex), 0 < o.lastIndex && (!o.multiline || o.multiline && "\n" !== qh(e, o.lastIndex - 1)) && (u = "(?: " + u + ")", f = " " + f, d++), t = new RegExp("^(?:" + u + ")", h)), Bh && (t = new RegExp("^" + u + "$(?!\\s)", h)), Gh && (n = o.lastIndex), r = Oh(Ph, c ? t : o, f), c ? r ? (r.input = Hh(r.input, d), r[0] = Hh(r[0], d), r.index = o.lastIndex, o.lastIndex += r[0].length) : o.lastIndex = 0 : Gh && r && (o.lastIndex = o.global ? r.index + r[0].length : n), Bh && r && 1 < r.length && Oh(Lh, r[0], t, function () {
 	      for (i = 1; i < arguments.length - 2; i++) void 0 === arguments[i] && (r[i] = void 0);
 	    }), r && l) for (r.groups = s = Mh(null), i = 0; i < l.length; i++) s[(a = l[i])[0]] = r[a[1]];
 	    return r;
@@ -4920,7 +4920,7 @@ var sendbirdLive_min = {exports: {}};
 	      Zh = mt,
 	      $h = Jh("species"),
 	      ed = RegExp.prototype,
-	      td = Hn.charAt,
+	      td = Gn.charAt,
 	      a = et,
 	      nd = ye,
 	      rd = Math.floor,
@@ -5056,13 +5056,13 @@ var sendbirdLive_min = {exports: {}};
 	      n = et,
 	      r = It,
 	      mt = Se,
-	      Gd = Ft,
-	      Hd = cu,
+	      Hd = Ft,
+	      Gd = cu,
 	      Vd = nt,
 	      Bd = kt,
 	      Kd = Ee,
 	      Qd = te,
-	      Hn = jn.f,
+	      Gn = jn.f,
 	      zd = B.f,
 	      Wd = Yt.f,
 	      Yd = i,
@@ -5117,8 +5117,8 @@ var sendbirdLive_min = {exports: {}};
 	          t = this;
 	      return Vd(Zd, t) && Qd(function () {
 	        Yd(t);
-	      }) ? Hd(Object(e), t, sf) : e;
-	    }, af = t ? Hn(Jd) : "MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,isFinite,isInteger,isNaN,isSafeInteger,parseFloat,parseInt,fromString,range".split(","), of = 0; af.length > of; of++) Gd(Jd, rf = af[of]) && !Gd(sf, rf) && Wd(sf, rf, zd(Jd, rf));
+	      }) ? Gd(Object(e), t, sf) : e;
+	    }, af = t ? Gn(Jd) : "MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,isFinite,isInteger,isNaN,isSafeInteger,parseFloat,parseInt,fromString,range".split(","), of = 0; af.length > of; of++) Hd(Jd, rf = af[of]) && !Hd(sf, rf) && Wd(sf, rf, zd(Jd, rf));
 
 	    mt(Xe, a, (sf.prototype = Zd).constructor = sf, {
 	      constructor: !0
@@ -5128,7 +5128,7 @@ var sendbirdLive_min = {exports: {}};
 	  function uf(n) {
 	    Object.keys(n).forEach(function (e) {
 	      var t;
-	      void 0 !== (t = n[e]) && !Number.isNaN(t) && "" !== t && t !== [] || delete n[e];
+	      (void 0 === (t = n[e]) || Number.isNaN(t) || "" === t || Array.isArray(t) && 0 === t.length) && delete n[e];
 	    });
 	  }
 
@@ -5923,7 +5923,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function (e) {
 	        if (this._rtcConnection) {
 	          var t,
-	              n = H(e.getTracks());
+	              n = G(e.getTracks());
 
 	          try {
 	            for (n.s(); !(t = n.n()).done;) {
@@ -5974,7 +5974,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "_replaceTrack",
 	      value: function (e) {
 	        var t,
-	            n = H(this._rtcConnection.getSenders());
+	            n = G(this._rtcConnection.getSenders());
 
 	        try {
 	          for (n.s(); !(t = n.n()).done;) {
@@ -6186,8 +6186,8 @@ var sendbirdLive_min = {exports: {}};
 	      Ff = K,
 	      jf = Et,
 	      Jn = xe,
-	      Gf = le,
-	      Hf = Ft,
+	      Hf = le,
+	      Gf = Ft,
 	      e = te,
 	      Vf = hs,
 	      Bf = ri,
@@ -6287,11 +6287,11 @@ var sendbirdLive_min = {exports: {}};
 	      _p,
 	      yp = function (e) {
 	    var t;
-	    Hf(Zf, e) && (t = Zf[e], delete Zf[e], t());
+	    Gf(Zf, e) && (t = Zf[e], delete Zf[e], t());
 	  },
 	      t = (jn && Yt || (jn = function (e) {
 	    Qf(arguments.length, 1);
-	    var t = Gf(e) ? e : Yf(e),
+	    var t = Hf(e) ? e : Yf(e),
 	        n = Bf(arguments, 1);
 	    return Zf[++Jf] = function () {
 	      jf(t, void 0, n);
@@ -6302,7 +6302,7 @@ var sendbirdLive_min = {exports: {}};
 	    zf.nextTick(ep(e));
 	  } : Wf && Wf.now ? Rf = function (e) {
 	    Wf.now(ep(e));
-	  } : i && !nt ? (r = (n = new i()).port2, n.port1.onmessage = tp, Rf = Jn(r.postMessage, r)) : Ff.addEventListener && Gf(Ff.postMessage) && !Ff.importScripts && Of && "file:" !== Of.protocol && !e(np) ? (Rf = np, Ff.addEventListener("message", tp, !1)) : Rf = $f in Kf("script") ? function (e) {
+	  } : i && !nt ? (r = (n = new i()).port2, n.port1.onmessage = tp, Rf = Jn(r.postMessage, r)) : Ff.addEventListener && Hf(Ff.postMessage) && !Ff.importScripts && Of && "file:" !== Of.protocol && !e(np) ? (Rf = np, Ff.addEventListener("message", tp, !1)) : Rf = $f in Kf("script") ? function (e) {
 	    Vf.appendChild(Kf("script"))[$f] = function () {
 	      Vf.removeChild(this), yp(e);
 	    };
@@ -6312,8 +6312,8 @@ var sendbirdLive_min = {exports: {}};
 	    set: jn,
 	    clear: Yt
 	  }),
-	      Hn = K,
-	      mt = /ipad|iphone|ipod/i.test(yt) && void 0 !== Hn.Pebble,
+	      Gn = K,
+	      mt = /ipad|iphone|ipod/i.test(yt) && void 0 !== Gn.Pebble,
 	      Xe = /web0s(?!.*chrome)/i.test(yt),
 	      a = K,
 	      Kt = xe,
@@ -6379,7 +6379,7 @@ var sendbirdLive_min = {exports: {}};
 	      jn = K,
 	      Ip = r,
 	      Yt = le,
-	      Hn = It,
+	      Gn = It,
 	      wp = Fn,
 	      B = ge,
 	      Tp = e,
@@ -6388,7 +6388,7 @@ var sendbirdLive_min = {exports: {}};
 	      kp = !1,
 	      Np = Yt(jn.PromiseRejectionEvent),
 	      ua = {
-	    CONSTRUCTOR: Hn("Promise", function () {
+	    CONSTRUCTOR: Gn("Promise", function () {
 	      var e = wp(Ip),
 	          t = e !== String(Ip);
 	      if (!t && 66 === Sp) return !0;
@@ -6432,8 +6432,8 @@ var sendbirdLive_min = {exports: {}};
 	    var n = bp.console;
 	    n && n.error && (1 == arguments.length ? n.error(e) : n.error(e, t));
 	  },
-	      Gp = rp,
-	      Hp = Jn,
+	      Hp = rp,
+	      Gp = Jn,
 	      ci = Jt,
 	      ri = r,
 	      i = mt,
@@ -6470,7 +6470,7 @@ var sendbirdLive_min = {exports: {}};
 	        var e = r.facade,
 	            t = r.value,
 	            n = lv(r);
-	        if (n && (n = Gp(function () {
+	        if (n && (n = Hp(function () {
 	          Op ? Jp.emit("unhandledRejection", t, e) : cv(tv, e, t);
 	        }), r.rejection = Op || lv(r) ? av : sv, n.error)) throw n.value;
 	      }));
@@ -6535,7 +6535,7 @@ var sendbirdLive_min = {exports: {}};
 	      done: !1,
 	      notified: !1,
 	      parent: !1,
-	      reactions: new Hp(),
+	      reactions: new Gp(),
 	      rejection: !1,
 	      state: 0,
 	      value: void 0
@@ -6628,7 +6628,7 @@ var sendbirdLive_min = {exports: {}};
 	    catch: function (e) {
 	      return this.then(void 0, e);
 	    }
-	  }), B(Fn) && (Hn = e("Promise").prototype.catch, jn.catch !== Hn && Yt(jn, "catch", Hn, {
+	  }), B(Fn) && (Gn = e("Promise").prototype.catch, jn.catch !== Gn && Yt(jn, "catch", Gn, {
 	    unsafe: !0
 	  }));
 	  var Ev = Ze,
@@ -6848,7 +6848,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "rejectAll",
 	      value: function (e) {
 	        var t,
-	            n = H(this._requests.keys());
+	            n = G(this._requests.keys());
 
 	        try {
 	          for (n.s(); !(t = n.n()).done;) {
@@ -6986,7 +6986,7 @@ var sendbirdLive_min = {exports: {}};
 
 	    return y(n);
 	  }(),
-	      Gv = ((Jn = Cv = Cv || {}).PENDING = "pending", Jn.ESTABLISHED = "established", Jn.CONNECTED = "connected", Jn.FAILED = "failed", Jn.RELEASING = "releasing", Jn.CLOSED = "closed", function () {
+	      Hv = ((Jn = Cv = Cv || {}).PENDING = "pending", Jn.ESTABLISHED = "established", Jn.CONNECTED = "connected", Jn.FAILED = "failed", Jn.RELEASING = "releasing", Jn.CLOSED = "closed", function () {
 	    g(s, jv);
 	    var i = b(s);
 
@@ -7010,7 +7010,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function () {}
 	    }]), s;
 	  }()),
-	      Hv = function () {
+	      Gv = function () {
 	    g(n, jv);
 	    var t = b(n);
 
@@ -7255,7 +7255,7 @@ var sendbirdLive_min = {exports: {}};
 	    }, {
 	      key: "toConnected",
 	      value: function () {
-	        this._changeState(new Hv(this));
+	        this._changeState(new Gv(this));
 	      }
 	    }, {
 	      key: "toFailed",
@@ -7270,7 +7270,7 @@ var sendbirdLive_min = {exports: {}};
 	    }, {
 	      key: "toClosed",
 	      value: function () {
-	        this._changeState(new Gv(this));
+	        this._changeState(new Hv(this));
 	      }
 	    }]), t;
 	  }(),
@@ -7707,7 +7707,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function () {
 	        if (this._stream) {
 	          var e,
-	              t = H(this._stream.getTracks());
+	              t = G(this._stream.getTracks());
 
 	          try {
 	            for (t.s(); !(e = t.n()).done;) e.value.stop();
@@ -8261,14 +8261,22 @@ var sendbirdLive_min = {exports: {}};
 	        return regeneratorRuntime.wrap(function (e) {
 	          for (;;) switch (e.prev = e.next) {
 	            case 0:
-	              return t = this.host.hostId, e.next = 3, this._sender.send(Vl.createExitHost(this.liveEventId, t));
+	              if (this.isActiveHost) {
+	                e.next = 2;
+	                break;
+	              }
 
-	            case 3:
+	              throw new Error("current host only action");
+
+	            case 2:
+	              return t = this.host.hostId, e.next = 5, this._sender.send(Vl.createExitHost(this.liveEventId, t));
+
+	            case 5:
 	              t = e.sent, n = t.payload.host, this.upsert({
 	                host: n
 	              }), this.teardown();
 
-	            case 7:
+	            case 9:
 	            case "end":
 	              return e.stop();
 	          }
@@ -8515,7 +8523,7 @@ var sendbirdLive_min = {exports: {}};
 	        null != (e = this.openChannel) && e.exit();
 	        var e,
 	            t,
-	            n = H(this._streams.values());
+	            n = G(this._streams.values());
 
 	        try {
 	          for (n.s(); !(t = n.n()).done;) t.value.closeStream();
@@ -8537,8 +8545,8 @@ var sendbirdLive_min = {exports: {}};
 	    }, {
 	      key: "_onEvent",
 	      value: function (e) {
-	        if (this.liveEventId === e.payload.liveEventId) if (e instanceof fl) this._onReady(e);else if (e instanceof pl) this._onStarted(e);else if (e instanceof vl) this._onEnded(e);else if (e instanceof Ul) this._onUpdated(e);else if (e instanceof _l) this._onHostEntered(e);else if (e instanceof yl) this._onHostExited(e);else if (e instanceof ml) this._onHostConnected(e);else if (e instanceof Ll) this._onHostDisconnected(e);else if (e instanceof gl) this._onHostAudioStatusChanged(e);else if (e instanceof El) this._onHostVideoStatusChanged(e);else if (e instanceof bl) this._onParticipantEntered(e);else if (e instanceof Il) this._onParticipantExited(e);else if (e instanceof Gl) this._onUpdateCustomItems(e);else {
-	          if (!(e instanceof Hl)) throw new Error("unknown event is received");
+	        if (this.liveEventId === e.payload.liveEventId) if (e instanceof fl) this._onReady(e);else if (e instanceof pl) this._onStarted(e);else if (e instanceof vl) this._onEnded(e);else if (e instanceof Ul) this._onUpdated(e);else if (e instanceof _l) this._onHostEntered(e);else if (e instanceof yl) this._onHostExited(e);else if (e instanceof ml) this._onHostConnected(e);else if (e instanceof Ll) this._onHostDisconnected(e);else if (e instanceof gl) this._onHostAudioStatusChanged(e);else if (e instanceof El) this._onHostVideoStatusChanged(e);else if (e instanceof bl) this._onParticipantEntered(e);else if (e instanceof Il) this._onParticipantExited(e);else if (e instanceof Hl) this._onUpdateCustomItems(e);else {
+	          if (!(e instanceof Gl)) throw new Error("unknown event is received");
 
 	          this._onDeleteCustomItems(e);
 	        }
@@ -8789,7 +8797,7 @@ var sendbirdLive_min = {exports: {}};
 	      value: function () {
 	        this._liveEvents = [];
 	        var e,
-	            t = H(this._liveEvents);
+	            t = G(this._liveEvents);
 
 	        try {
 	          for (t.s(); !(e = t.n()).done;) e.value.teardown();
@@ -8976,7 +8984,7 @@ var sendbirdLive_min = {exports: {}};
 	  function F_(e) {
 	    if (e) {
 	      var t,
-	          n = H(e.getTracks());
+	          n = G(e.getTracks());
 
 	      try {
 	        for (n.s(); !(t = n.n()).done;) t.value.stop();
@@ -8992,7 +9000,7 @@ var sendbirdLive_min = {exports: {}};
 	    return (e = e.match(t)) && e.length >= n && parseInt(e[n], 10);
 	  }
 
-	  var G_ = "safari" === function () {
+	  var H_ = "safari" === function () {
 	    var e = {
 	      browser: null,
 	      version: null
@@ -9005,7 +9013,7 @@ var sendbirdLive_min = {exports: {}};
 	    }
 	    return e;
 	  }().browser,
-	      H_ = function () {
+	      G_ = function () {
 	    function t(e) {
 	      _(this, t), m(this, "_hasPermission", !1), this._deviceManager = e, this._updateQueued = !1;
 	    }
@@ -9038,7 +9046,7 @@ var sendbirdLive_min = {exports: {}};
 	              return this._updateAt = Date.now(), (r = this.stream) || (s = new MediaStream(), S_(s, {
 	                audio: t,
 	                video: n
-	              }), this.stream = s), G_ && F_(r), e.prev = 13, e.next = 16, this._deviceManager.getMediaConstraints({
+	              }), this.stream = s), H_ && F_(r), e.prev = 13, e.next = 16, this._deviceManager.getMediaConstraints({
 	                usingAudio: t,
 	                usingVideo: n
 	              });
@@ -9047,7 +9055,7 @@ var sendbirdLive_min = {exports: {}};
 	              return s = e.sent, e.next = 19, navigator.mediaDevices.getUserMedia(s);
 
 	            case 19:
-	              i = e.sent, this._hasPermission = !0, a = H(this._deviceManager.mediaAccesses);
+	              i = e.sent, this._hasPermission = !0, a = G(this._deviceManager.mediaAccesses);
 
 	              try {
 	                for (a.s(); !(o = a.n()).done;) o.value.hasPermission = !0;
@@ -9067,7 +9075,7 @@ var sendbirdLive_min = {exports: {}};
 	              S_(i, {
 	                audio: t,
 	                video: n
-	              }), G_ || F_(r), this.stream = i, u = H(this._deviceManager.mediaAccesses);
+	              }), H_ || F_(r), this.stream = i, u = G(this._deviceManager.mediaAccesses);
 
 	              try {
 	                for (u.s(); !(c = u.n()).done;) c.value.streamChanged(this.stream);
@@ -9108,7 +9116,7 @@ var sendbirdLive_min = {exports: {}};
 	        audioinput: void 0,
 	        audiooutput: void 0,
 	        videoinput: void 0
-	      }, this._sendbirdCallListeners = new Map(), this._streamManager = new H_(this), navigator.mediaDevices.ondevicechange = function () {
+	      }, this._sendbirdCallListeners = new Map(), this._streamManager = new G_(this), navigator.mediaDevices.ondevicechange = function () {
 	        return e._onDeviceChanged();
 	      };
 	    }
@@ -9278,7 +9286,7 @@ var sendbirdLive_min = {exports: {}};
 	      key: "_onAudioOutputChanged",
 	      value: function () {
 	        var e,
-	            t = H(this.mediaAccesses);
+	            t = G(this.mediaAccesses);
 
 	        try {
 	          for (t.s(); !(e = t.n()).done;) {
@@ -9312,7 +9320,7 @@ var sendbirdLive_min = {exports: {}};
 	        }(this._availableMediaDevices[e], t)) return !1;
 	        this._availableMediaDevices[e] = t, s = this._updateCurrentMediaDevice(e, s);
 	        var a,
-	            o = H(this._sendbirdCallListeners.values());
+	            o = G(this._sendbirdCallListeners.values());
 
 	        try {
 	          for (o.s(); !(a = o.n()).done;) {
@@ -9378,7 +9386,7 @@ var sendbirdLive_min = {exports: {}};
 	      })
 	    }]), t;
 	  }(),
-	      K_ = "v1.0.0-beta",
+	      K_ = "v1.0.0-beta.3",
 	      Q_ = function () {
 	    function t(e) {
 	      _(this, t), this._parse = e;
@@ -9432,7 +9440,7 @@ var sendbirdLive_min = {exports: {}};
 
 	    function r(e) {
 	      var t;
-	      return _(this, r), (t = n.call(this))._ctx = e, t._ws = null, t._retryTimer = null, t._closed = !0, t._sessionKey = null, t._requestMap = new qv(t._getTimeoutTime()), t._messageParser = new Q_(t._ctx.parse), t._hostUrl = null != (e = t._ctx.websocketHost) ? e : "wss://ws-IDENTIFIER.calls-stg.sendbirdtest.com".replace("IDENTIFIER", t._ctx.appId), t;
+	      return _(this, r), (t = n.call(this))._ctx = e, t._ws = null, t._retryTimer = null, t._closed = !0, t._sessionKey = null, t._requestMap = new qv(t._getTimeoutTime()), t._messageParser = new Q_(t._ctx.parse), t._hostUrl = null != (e = t._ctx.websocketHost) ? e : "wss://ws-IDENTIFIER.calls.sendbird.com".replace("IDENTIFIER", t._ctx.appId), t;
 	    }
 
 	    return y(r, [{
@@ -9554,7 +9562,7 @@ var sendbirdLive_min = {exports: {}};
 	      _(this, t), this._ctx = e, this._fetch = function () {
 	        var e;
 	        return (e = window).fetch.apply(e, arguments);
-	      }, this._sessionKey = null, this._hostUrl = null != (e = this._ctx.apiHost) ? e : "https://api-IDENTIFIER.calls-stg.sendbirdtest.com".replace("IDENTIFIER", this._ctx.appId);
+	      }, this._sessionKey = null, this._hostUrl = null != (e = this._ctx.apiHost) ? e : "https://api-IDENTIFIER.calls.sendbird.com".replace("IDENTIFIER", this._ctx.appId);
 	    }
 
 	    var n;
@@ -10515,8 +10523,8 @@ var sendbirdLive_min = {exports: {}};
 	    });
 	  };
 
-	  var Gy,
-	      Hy,
+	  var Hy,
+	      Gy,
 	      Vy,
 	      By,
 	      Ky = nm,
@@ -10625,7 +10633,7 @@ var sendbirdLive_min = {exports: {}};
 	      Wy = (o($y, Vy = ay), $y.prototype.convertToMessage = function () {
 	    return "".concat(this.code).concat(JSON.stringify(this.payload), "\n");
 	  }, $y),
-	      Yy = (o(Zy, Hy = Wy), Zy),
+	      Yy = (o(Zy, Gy = Wy), Zy),
 	      Xy = (Object.defineProperty(Jy.prototype, "isWaiting", {
 	    get: function () {
 	      return !!this._pingTimeoutTimer;
@@ -10669,7 +10677,7 @@ var sendbirdLive_min = {exports: {}};
 	  }
 
 	  function Zy() {
-	    return Hy.call(this, {
+	    return Gy.call(this, {
 	      code: "PING",
 	      payload: {
 	        id: Date.now(),
@@ -10713,7 +10721,7 @@ var sendbirdLive_min = {exports: {}};
 	    this.type = t, this.createdAt = e, this.data = n;
 	  }
 
-	  (Fn = Gy = Gy || {}).CONNECTING = "CONNECTING", Fn.OPEN = "OPEN", Fn.CLOSED = "CLOSED";
+	  (Fn = Hy = Hy || {}).CONNECTING = "CONNECTING", Fn.OPEN = "OPEN", Fn.CLOSED = "CLOSED";
 
 	  function rm() {
 	    var n = this;
@@ -10726,12 +10734,12 @@ var sendbirdLive_min = {exports: {}};
 	    get: function () {
 	      if (this._ws) switch (this._ws.readyState) {
 	        case 0:
-	          return Gy.CONNECTING;
+	          return Hy.CONNECTING;
 
 	        case 1:
-	          return Gy.OPEN;
+	          return Hy.OPEN;
 	      }
-	      return Gy.CLOSED;
+	      return Hy.CLOSED;
 	    },
 	    enumerable: !1,
 	    configurable: !0
@@ -11005,7 +11013,7 @@ var sendbirdLive_min = {exports: {}};
 	      qm,
 	      Fm,
 	      jm = Og,
-	      Gm = (Object.defineProperty(Ag.prototype, "isReady", {
+	      Hm = (Object.defineProperty(Ag.prototype, "isReady", {
 	    get: function () {
 	      return this._currentConnectionStateType === im.CONNECTED;
 	    },
@@ -11087,7 +11095,7 @@ var sendbirdLive_min = {exports: {}};
 	  }, Ag.prototype.cancelAll = function () {
 	    this._logger.debug("cancel all api requests"), this.commandRouter.cancelAll();
 	  }, Ag),
-	      Hm = (o(Ng, Um = h), Ng),
+	      Gm = (o(Ng, Um = h), Ng),
 	      Vm = (o(kg, Pm = Wy), kg),
 	      Bm = (o(Cg, Lm = S), Cg),
 	      Km = (o(Sg, xm = zy), Sg),
@@ -11131,7 +11139,7 @@ var sendbirdLive_min = {exports: {}};
 	            return r.isSessionTokenExpiredError ? (this._handleError(o), [2]) : [3, 4];
 
 	          case 4:
-	            return e.trys.push([4, 6,, 7]), i = new Hm({
+	            return e.trys.push([4, 6,, 7]), i = new Gm({
 	              userId: this._sdkState.userId,
 	              authToken: a,
 	              expiringSession: !0
@@ -11833,7 +11841,7 @@ var sendbirdLive_min = {exports: {}};
 
 	  o(function (e, t) {
 	    return (e = Fm.call(this, e, t) || this).metadata = t, e;
-	  }, Fm = S), (Hn = ym = ym || {}).BASE = "base", Hn.GROUP = "group", Hn.OPEN = "open", (nt = mm = mm || {}).OPERATOR = "operator", nt.NONE = "none", (mt = gm = gm || {}).BASE = "base", mt.USER = "user", mt.FILE = "file", mt.ADMIN = "admin", (ua = Em = Em || {}).ALL = "", ua.USER = "MESG", ua.FILE = "FILE", ua.ADMIN = "ADMM", (t = bm = bm || {}).USER = "MESG", t.FILE = "FILE", t.ADMIN = "ADMM", (sa = Im = Im || {}).USERS = "users", sa.CHANNEL = "channel", (n = wm = wm || {}).ALL = "all", n.NONE = "none", n.ONLY_REPLY_TO_CHANNEL = "only_reply_to_channel", (Jn = Tm = Tm || {}).DEFAULT = "default", Jn.SUPPRESS = "suppress", (Jt = Sm = Sm || {}).PENDING = "pending", Jt.SCHEDULED = "scheduled", Jt.SUCCEEDED = "succeeded", Jt.FAILED = "failed", Jt.CANCELED = "canceled";
+	  }, Fm = S), (Gn = ym = ym || {}).BASE = "base", Gn.GROUP = "group", Gn.OPEN = "open", (nt = mm = mm || {}).OPERATOR = "operator", nt.NONE = "none", (mt = gm = gm || {}).BASE = "base", mt.USER = "user", mt.FILE = "file", mt.ADMIN = "admin", (ua = Em = Em || {}).ALL = "", ua.USER = "MESG", ua.FILE = "FILE", ua.ADMIN = "ADMM", (t = bm = bm || {}).USER = "MESG", t.FILE = "FILE", t.ADMIN = "ADMM", (sa = Im = Im || {}).USERS = "users", sa.CHANNEL = "channel", (n = wm = wm || {}).ALL = "all", n.NONE = "none", n.ONLY_REPLY_TO_CHANNEL = "only_reply_to_channel", (Jn = Tm = Tm || {}).DEFAULT = "default", Jn.SUPPRESS = "suppress", (Jt = Sm = Sm || {}).PENDING = "pending", Jt.SCHEDULED = "scheduled", Jt.SUCCEEDED = "succeeded", Jt.FAILED = "failed", Jt.CANCELED = "canceled";
 
 	  function Rg(e) {
 	    switch (e) {
@@ -11896,8 +11904,8 @@ var sendbirdLive_min = {exports: {}};
 
 	    return !1;
 	  },
-	      Gg = (o(Xg, qg = h), Xg),
-	      Hg = (o(Yg, Ug = S), Yg),
+	      Hg = (o(Xg, qg = h), Xg),
+	      Gg = (o(Yg, Ug = S), Yg),
 	      Vg = (o(Wg, Pg = h), Wg),
 	      Bg = (o(zg, Lg = S), zg),
 	      Kg = (o(Qg, xg = h), Qg);
@@ -12025,7 +12033,7 @@ var sendbirdLive_min = {exports: {}};
 	            }), [4, t.send(n)];
 
 	          case 1:
-	            return t = e.sent(), n = t.as(Hg).metaData, this._applyMetaData(n), [2, this.metaData];
+	            return t = e.sent(), n = t.as(Gg).metaData, this._applyMetaData(n), [2, this.metaData];
 	        }
 	      });
 	    });
@@ -12548,11 +12556,11 @@ var sendbirdLive_min = {exports: {}};
 	      DE,
 	      ME = VE,
 	      xE = {},
-	      N = (HE.of = function (e) {
+	      N = (GE.of = function (e) {
 	    if (xE[e]) return xE[e];
 	    throw p.lostInstance;
-	  }, HE),
-	      ci = (GE.prototype.init = function (e, t) {
+	  }, GE),
+	      ci = (HE.prototype.init = function (e, t) {
 	    var n = t.sdkState,
 	        r = t.dispatcher,
 	        i = t.sessionManager,
@@ -12561,7 +12569,7 @@ var sendbirdLive_min = {exports: {}};
 	        t = (t.onlineDetector, t.cacheContext),
 	        t = void 0 === t ? null : t;
 	    this._iid = e, this._cacheContext = t, this._sdkState = n, this._dispatcher = r, this._sessionManager = i, this._requestQueue = s, this._logger = a;
-	  }, GE),
+	  }, HE),
 	      LE = (o(jE, DE = h), jE),
 	      PE = (o(FE, RE = S), FE),
 	      UE = (o(qE, OE = jn), qE.payloadify = function (e) {
@@ -12601,9 +12609,9 @@ var sendbirdLive_min = {exports: {}};
 	    return t.requestId = e.requestId, t;
 	  }
 
-	  function GE() {}
+	  function HE() {}
 
-	  function HE(e, t) {
+	  function GE(e, t) {
 	    var n, r, i, s;
 	    return this.connectedAt = 0, this.firstConnectedAt = 0, this.connectionHandlers = new Map(), this.userEventHandlers = new Map(), xE[e] || (xE[e] = this, n = null != (n = t.options) ? n : new dy(), r = this.sdkState = {
 	      appId: t.appId,
@@ -12632,7 +12640,7 @@ var sendbirdLive_min = {exports: {}};
 	      encryption: t.encryption,
 	      store: t.store,
 	      localCacheEnabled: null != (s = t.localCacheEnabled) && s
-	    }), this.debugMode = null != (s = t.debugMode) && s, this.maxSuperGroupChannelUnreadCount = Z_.DEFAULT_MAX_UNREAD_COUNT_OF_SUPER_GROUP_CHANNEL, this.useMemberInfoInMessage = n.useMemberInfoInMessage, this.typingIndicatorInvalidateTime = n.typingIndicatorInvalidateTime, this.typingIndicatorThrottle = n.typingIndicatorThrottle, this.concurrentCallLimit = null, this.backOffDelay = null, t = this.dispatcher = new gy(), s = new _y(), this.requestQueue = new Gm(e, {
+	    }), this.debugMode = null != (s = t.debugMode) && s, this.maxSuperGroupChannelUnreadCount = Z_.DEFAULT_MAX_UNREAD_COUNT_OF_SUPER_GROUP_CHANNEL, this.useMemberInfoInMessage = n.useMemberInfoInMessage, this.typingIndicatorInvalidateTime = n.typingIndicatorInvalidateTime, this.typingIndicatorThrottle = n.typingIndicatorThrottle, this.concurrentCallLimit = null, this.backOffDelay = null, t = this.dispatcher = new gy(), s = new _y(), this.requestQueue = new Hm(e, {
 	      auth: s,
 	      sdkState: r,
 	      dispatcher: t,
@@ -13274,7 +13282,7 @@ var sendbirdLive_min = {exports: {}};
 
 	  (li = r0 = r0 || {})[li.PENDING = 0] = "PENDING", li[li.UPLOADING = 1] = "UPLOADING", li[li.UPLOADED = 2] = "UPLOADED", li[li.SENDING = 3] = "SENDING", li[li.FAILED = 4] = "FAILED";
 
-	  function G0(e) {
+	  function H0(e) {
 	    return ly(wm, e.replyType) && c("boolean", e.includeReactions) && c("boolean", e.includeMetaArray) && c("boolean", e.includeParentMessageInfo) && c("boolean", e.includeThreadInfo) && c("boolean", e.includePollDetails);
 	  }
 
@@ -13534,7 +13542,7 @@ var sendbirdLive_min = {exports: {}};
 	      }
 	    }
 	  };
-	  var H0,
+	  var G0,
 	      V0 = Q0,
 	      B0 = {
 	    prevResultSize: 0,
@@ -13572,7 +13580,7 @@ var sendbirdLive_min = {exports: {}};
 	    }), this._onlineDetector = s;
 	  }
 
-	  (a = H0 = H0 || {}).UNKNOWN = "UNKNOWN", a.EVENT_MESSAGE_SENT_SUCCESS = "EVENT_MESSAGE_SENT_SUCCESS", a.EVENT_MESSAGE_SENT_FAILED = "EVENT_MESSAGE_SENT_FAILED", a.EVENT_MESSAGE_SENT_PENDING = "EVENT_MESSAGE_SENT_PENDING", a.EVENT_MESSAGE_RECEIVED = "EVENT_MESSAGE_RECEIVED", a.EVENT_MESSAGE_UPDATED = "EVENT_MESSAGE_UPDATED", a.EVENT_MESSAGE_DELETED = "EVENT_MESSAGE_DELETED", a.EVENT_MESSAGE_READ = "EVENT_MESSAGE_READ", a.EVENT_MESSAGE_DELIVERED = "EVENT_MESSAGE_DELIVERED", a.EVENT_MESSAGE_REACTION_UPDATED = "EVENT_MESSAGE_REACTION_UPDATED", a.EVENT_MESSAGE_THREADINFO_UPDATED = "EVENT_MESSAGE_THREADINFO_UPDATED", a.EVENT_MESSAGE_OFFSET_UPDATED = "EVENT_MESSAGE_OFFSET_UPDATED", a.REQUEST_MESSAGE = "REQUEST_MESSAGE", a.REQUEST_RESEND_MESSAGE = "REQUEST_RESEND_MESSAGE", a.REQUEST_THREADED_MESSAGE = "REQUEST_THREADED_MESSAGE", a.REQUEST_MESSAGE_CHANGELOGS = "REQUEST_MESSAGE_CHANGELOGS", a.SYNC_MESSAGE_FILL = "SYNC_MESSAGE_FILL", a.SYNC_MESSAGE_BACKGROUND = "SYNC_MESSAGE_BACKGROUND", a.SYNC_MESSAGE_CHANGELOGS = "SYNC_MESSAGE_CHANGELOGS", a.LOCAL_MESSAGE_PENDING_CREATED = "LOCAL_MESSAGE_PENDING_CREATED", a.LOCAL_MESSAGE_FAILED = "LOCAL_MESSAGE_FAILED", a.LOCAL_MESSAGE_CANCELED = "LOCAL_MESSAGE_CANCELED", a.LOCAL_MESSAGE_RESEND_STARTED = "LOCAL_MESSAGE_RESEND_STARTED";
+	  (a = G0 = G0 || {}).UNKNOWN = "UNKNOWN", a.EVENT_MESSAGE_SENT_SUCCESS = "EVENT_MESSAGE_SENT_SUCCESS", a.EVENT_MESSAGE_SENT_FAILED = "EVENT_MESSAGE_SENT_FAILED", a.EVENT_MESSAGE_SENT_PENDING = "EVENT_MESSAGE_SENT_PENDING", a.EVENT_MESSAGE_RECEIVED = "EVENT_MESSAGE_RECEIVED", a.EVENT_MESSAGE_UPDATED = "EVENT_MESSAGE_UPDATED", a.EVENT_MESSAGE_DELETED = "EVENT_MESSAGE_DELETED", a.EVENT_MESSAGE_READ = "EVENT_MESSAGE_READ", a.EVENT_MESSAGE_DELIVERED = "EVENT_MESSAGE_DELIVERED", a.EVENT_MESSAGE_REACTION_UPDATED = "EVENT_MESSAGE_REACTION_UPDATED", a.EVENT_MESSAGE_THREADINFO_UPDATED = "EVENT_MESSAGE_THREADINFO_UPDATED", a.EVENT_MESSAGE_OFFSET_UPDATED = "EVENT_MESSAGE_OFFSET_UPDATED", a.REQUEST_MESSAGE = "REQUEST_MESSAGE", a.REQUEST_RESEND_MESSAGE = "REQUEST_RESEND_MESSAGE", a.REQUEST_THREADED_MESSAGE = "REQUEST_THREADED_MESSAGE", a.REQUEST_MESSAGE_CHANGELOGS = "REQUEST_MESSAGE_CHANGELOGS", a.SYNC_MESSAGE_FILL = "SYNC_MESSAGE_FILL", a.SYNC_MESSAGE_BACKGROUND = "SYNC_MESSAGE_BACKGROUND", a.SYNC_MESSAGE_CHANGELOGS = "SYNC_MESSAGE_CHANGELOGS", a.LOCAL_MESSAGE_PENDING_CREATED = "LOCAL_MESSAGE_PENDING_CREATED", a.LOCAL_MESSAGE_FAILED = "LOCAL_MESSAGE_FAILED", a.LOCAL_MESSAGE_CANCELED = "LOCAL_MESSAGE_CANCELED", a.LOCAL_MESSAGE_RESEND_STARTED = "LOCAL_MESSAGE_RESEND_STARTED";
 	  o(eb, Y0 = ay);
 	  var z0,
 	      W0,
@@ -13603,7 +13611,7 @@ var sendbirdLive_min = {exports: {}};
 	  }
 
 	  o(tb, X0 = ay);
-	  o(Gb, db = h);
+	  o(Hb, db = h);
 
 	  var nb,
 	      rb,
@@ -13616,7 +13624,7 @@ var sendbirdLive_min = {exports: {}};
 	      lb,
 	      hb,
 	      db,
-	      fb = Gb,
+	      fb = Hb,
 	      pb = (o(jb, hb = S), jb),
 	      vb = (o(Fb, lb = h), Fb),
 	      _b = (o(qb, cb = S), qb),
@@ -13726,7 +13734,7 @@ var sendbirdLive_min = {exports: {}};
 	      });
 	    });
 	  }, Mb.prototype.getMessagesByTimestamp = function (r, i, s, a, o) {
-	    return void 0 === o && (o = H0.REQUEST_MESSAGE), re(this, void 0, void 0, function () {
+	    return void 0 === o && (o = G0.REQUEST_MESSAGE), re(this, void 0, void 0, function () {
 	      var t, n;
 	      return ie(this, function (e) {
 	        switch (e.label) {
@@ -13746,7 +13754,7 @@ var sendbirdLive_min = {exports: {}};
 	      });
 	    });
 	  }, Mb.prototype.getThreadedMessagesByTimestamp = function (i, s, a, o) {
-	    return void 0 === o && (o = H0.REQUEST_THREADED_MESSAGE), re(this, void 0, void 0, function () {
+	    return void 0 === o && (o = G0.REQUEST_THREADED_MESSAGE), re(this, void 0, void 0, function () {
 	      var t, n, r;
 	      return ie(this, function (e) {
 	        switch (e.label) {
@@ -13775,7 +13783,7 @@ var sendbirdLive_min = {exports: {}};
 	      });
 	    });
 	  }, Mb.prototype.getMessageChangelogs = function (a, o, u, c, l) {
-	    return void 0 === l && (l = H0.REQUEST_MESSAGE_CHANGELOGS), re(this, void 0, void 0, function () {
+	    return void 0 === l && (l = G0.REQUEST_MESSAGE_CHANGELOGS), re(this, void 0, void 0, function () {
 	      var t, n, r, i, s;
 	      return ie(this, function (e) {
 	        switch (e.label) {
@@ -14034,7 +14042,7 @@ var sendbirdLive_min = {exports: {}};
 	    return n.message = t ? w0(e, f({}, t)) : null, n;
 	  }
 
-	  function Gb(e) {
+	  function Hb(e) {
 	    var t = e.channelType,
 	        n = e.channelUrl,
 	        r = e.messageId,
@@ -14088,7 +14096,7 @@ var sendbirdLive_min = {exports: {}};
 	      });
 	    });
 	  };
-	  var Hb,
+	  var Gb,
 	      Vb,
 	      Bb,
 	      Kb,
@@ -14147,7 +14155,7 @@ var sendbirdLive_min = {exports: {}};
 	    channelUrl: null,
 	    scheduledMessageId: 0
 	  },
-	      Yb = (o(Xb, Hb = ci), Xb.prototype.init = function (e, t) {
+	      Yb = (o(Xb, Gb = ci), Xb.prototype.init = function (e, t) {
 	    var n = t.sdkState,
 	        r = t.dispatcher,
 	        i = t.sessionManager,
@@ -14155,7 +14163,7 @@ var sendbirdLive_min = {exports: {}};
 	        a = t.logger,
 	        o = t.onlineDetector,
 	        t = t.cacheContext;
-	    Hb.prototype.init.call(this, e, {
+	    Gb.prototype.init.call(this, e, {
 	      sdkState: n,
 	      dispatcher: r,
 	      sessionManager: i,
@@ -14191,7 +14199,7 @@ var sendbirdLive_min = {exports: {}};
 	  }, Xb);
 
 	  function Xb() {
-	    var e = null !== Hb && Hb.apply(this, arguments) || this;
+	    var e = null !== Gb && Gb.apply(this, arguments) || this;
 	    return e.name = "message", e;
 	  }
 
@@ -14323,10 +14331,10 @@ var sendbirdLive_min = {exports: {}};
 	  }),
 	      SI = f({}, K),
 	      CI = (o(VI, EI = h), VI),
-	      kI = (o(HI, gI = S), HI),
-	      NI = (o(GI, mI = hs), GI.prototype._validate = function () {
+	      kI = (o(GI, gI = S), GI),
+	      NI = (o(HI, mI = hs), HI.prototype._validate = function () {
 	    return mI.prototype._validate.call(this);
-	  }, GI.prototype.next = function () {
+	  }, HI.prototype.next = function () {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i, s;
 	      return ie(this, function (e) {
@@ -14357,7 +14365,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, GI),
+	  }, HI),
 	      AI = (o(jI, yI = h), jI),
 	      OI = (o(FI, _I = S), FI),
 	      RI = (o(qI, vI = hs), qI.prototype.next = function () {
@@ -14477,11 +14485,11 @@ var sendbirdLive_min = {exports: {}};
 	    }, t;
 	  }
 
-	  function GI(e, t, n, r) {
+	  function HI(e, t, n, r) {
 	    return mI.call(this, e, t, n, r) || this;
 	  }
 
-	  function HI(t, e) {
+	  function GI(t, e) {
 	    var n = gI.call(this, t, e) || this;
 	    return n.operators = e.operators.map(function (e) {
 	      return new k(t, e);
@@ -14584,8 +14592,8 @@ var sendbirdLive_min = {exports: {}};
 	      Dw = (o(Kw, aw = S), Kw),
 	      Mw = (o(Bw, sw = h), Bw),
 	      xw = (o(Vw, iw = S), Vw),
-	      Lw = (o(Hw, rw = h), Hw),
-	      Pw = (o(Gw, nw = S), Gw),
+	      Lw = (o(Gw, rw = h), Gw),
+	      Pw = (o(Hw, nw = S), Hw),
 	      Uw = (o(jw, tw = zy), jw),
 	      qw = (o(Fw, ew = h), Fw);
 
@@ -14602,12 +14610,12 @@ var sendbirdLive_min = {exports: {}};
 	    return e.created = null, e.updated = null, e.deleted = null, n.data && (e.created = n.data.created, e.updated = n.data.updated, e.deleted = n.data.deleted), e;
 	  }
 
-	  function Gw(e, t) {
+	  function Hw(e, t) {
 	    e = nw.call(this, e, t) || this;
 	    return e.metaCounter = t, e;
 	  }
 
-	  function Hw(e) {
+	  function Gw(e) {
 	    var t = this,
 	        n = e.channelUrl,
 	        r = e.channelType,
@@ -14886,8 +14894,8 @@ var sendbirdLive_min = {exports: {}};
 	  }, LT = S);
 	  o(gS, XT = zy);
 	  var jT,
-	      GT,
 	      HT,
+	      GT,
 	      VT,
 	      BT,
 	      KT,
@@ -14905,8 +14913,8 @@ var sendbirdLive_min = {exports: {}};
 	      rS = (o(pS, KT = zy), pS),
 	      iS = (o(fS, BT = Wy), fS),
 	      sS = (o(dS, VT = zy), dS),
-	      aS = (o(hS, HT = Wy), hS),
-	      oS = (o(lS, GT = zy), lS),
+	      aS = (o(hS, GT = Wy), hS),
+	      oS = (o(lS, HT = zy), lS),
 	      uS = (o(cS, jT = h), cS);
 
 	  function cS(e) {
@@ -14917,7 +14925,7 @@ var sendbirdLive_min = {exports: {}};
 	  function lS(e, t, n) {
 	    var r,
 	        i = this,
-	        e = ((i = GT.call(this, e, "FEDI", n) || this).message = new T0(e, n), N.of(e).sdkState);
+	        e = ((i = HT.call(this, e, "FEDI", n) || this).message = new T0(e, n), N.of(e).sdkState);
 	    return i.mentionCountChange = Mg({
 	      mentionType: null != (r = null == (r = n.old_values) ? void 0 : r.mention_type) ? r : null,
 	      mentionedUserIds: null != (n = null == (r = n.old_values) ? void 0 : r.mentioned_user_ids) ? n : []
@@ -14933,7 +14941,7 @@ var sendbirdLive_min = {exports: {}};
 	    var t = [];
 	    return e.mentionType === Im.USERS && (e.mentionedUserIds ? t = e.mentionedUserIds : e.mentionedUsers && (t = e.mentionedUsers.map(function (e) {
 	      return e.userId;
-	    }))), HT.call(this, {
+	    }))), GT.call(this, {
 	      code: "FEDI",
 	      ackRequired: !0,
 	      payload: w({
@@ -15100,8 +15108,8 @@ var sendbirdLive_min = {exports: {}};
 	      qS = (o(nC, AS = S), nC),
 	      FS = (o(tC, NS = h), tC),
 	      jS = (o(eC, kS = S), eC),
-	      GS = (o($S, CS = h), $S),
-	      HS = (o(ZS, SS = S), ZS),
+	      HS = (o($S, CS = h), $S),
+	      GS = (o(ZS, SS = S), ZS),
 	      VS = (o(JS, TS = h), JS),
 	      BS = (o(XS, wS = S), XS),
 	      KS = (o(YS, IS = h), YS),
@@ -15259,14 +15267,14 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return t = N.of(this._iid).requestQueue, n = new Gg({
+	            return t = N.of(this._iid).requestQueue, n = new Hg({
 	              channelUrl: this.url,
 	              channelType: this.channelType,
 	              metadata: r
 	            }), [4, t.send(n)];
 
 	          case 1:
-	            return t = e.sent(), n = t.as(Hg).metaData, this._upsertCachedMetaData(n, 0), [2, n];
+	            return t = e.sent(), n = t.as(Gg).metaData, this._upsertCachedMetaData(n, 0), [2, n];
 	        }
 	      });
 	    });
@@ -15610,7 +15618,7 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return n = f(f({}, K0), n), C(c("number", t) && G0(n)).throw(p.invalidParameters), [4, Ib.of(this._iid).getMessageChangelogs(this.url, this.channelType, t, n)];
+	            return n = f(f({}, K0), n), C(c("number", t) && H0(n)).throw(p.invalidParameters), [4, Ib.of(this._iid).getMessageChangelogs(this.url, this.channelType, t, n)];
 
 	          case 1:
 	            return [2, e.sent()];
@@ -15622,7 +15630,7 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return n = f(f({}, K0), n), C(c("string", t) && G0(n)).throw(p.invalidParameters), [4, Ib.of(this._iid).getMessageChangelogs(this.url, this.channelType, t, n)];
+	            return n = f(f({}, K0), n), C(c("string", t) && H0(n)).throw(p.invalidParameters), [4, Ib.of(this._iid).getMessageChangelogs(this.url, this.channelType, t, n)];
 
 	          case 1:
 	            return [2, e.sent()];
@@ -15723,7 +15731,7 @@ var sendbirdLive_min = {exports: {}};
 
 	      n.dispatch(new J0({
 	        messages: [t],
-	        source: H0.EVENT_MESSAGE_SENT_PENDING
+	        source: G0.EVENT_MESSAGE_SENT_PENDING
 	      })), ae(function () {
 	        return re(s, void 0, void 0, function () {
 	          return ie(this, function (e) {
@@ -15740,7 +15748,7 @@ var sendbirdLive_min = {exports: {}};
 	      var t = e.as(rS).message;
 	      a.dispatch(new J0({
 	        messages: [t],
-	        source: H0.EVENT_MESSAGE_SENT_SUCCESS
+	        source: G0.EVENT_MESSAGE_SENT_SUCCESS
 	      })), ae(function () {
 	        return re(s, void 0, void 0, function () {
 	          return ie(this, function (e) {
@@ -15756,7 +15764,7 @@ var sendbirdLive_min = {exports: {}};
 
 	        s._markMessageAsFailed(t, n, e), a.dispatch(new J0({
 	          messages: [t],
-	          source: t.sendingStatus === Sm.PENDING ? H0.REQUEST_RESEND_MESSAGE : H0.EVENT_MESSAGE_SENT_FAILED
+	          source: t.sendingStatus === Sm.PENDING ? G0.REQUEST_RESEND_MESSAGE : G0.EVENT_MESSAGE_SENT_FAILED
 	        })), ae(function () {
 	          return re(s, void 0, void 0, function () {
 	            return ie(this, function (e) {
@@ -15807,7 +15815,7 @@ var sendbirdLive_min = {exports: {}};
 	          case 1:
 	            return r = e.sent(), i = r.as(sS).message, n.dispatch(new J0({
 	              messages: [i],
-	              source: H0.EVENT_MESSAGE_UPDATED
+	              source: G0.EVENT_MESSAGE_UPDATED
 	            })), [2, i];
 	        }
 
@@ -15841,7 +15849,7 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return C(r instanceof b0 && 0 < r.messageId && hy("string", i)).throw(p.invalidParameters), t = N.of(this._iid).requestQueue, n = new GS({
+	            return C(r instanceof b0 && 0 < r.messageId && hy("string", i)).throw(p.invalidParameters), t = N.of(this._iid).requestQueue, n = new HS({
 	              channelType: this.channelType,
 	              channelUrl: this.url,
 	              messageId: r.messageId,
@@ -15849,7 +15857,7 @@ var sendbirdLive_min = {exports: {}};
 	            }), [4, t.send(n)];
 
 	          case 1:
-	            return [2, e.sent().as(HS).message];
+	            return [2, e.sent().as(GS).message];
 	        }
 	      });
 	    });
@@ -15910,7 +15918,7 @@ var sendbirdLive_min = {exports: {}};
 
 	      a.dispatch(new J0({
 	        messages: [t],
-	        source: H0.EVENT_MESSAGE_SENT_PENDING
+	        source: G0.EVENT_MESSAGE_SENT_PENDING
 	      })), ae(function () {
 	        return re(s, void 0, void 0, function () {
 	          return ie(this, function (e) {
@@ -15921,7 +15929,7 @@ var sendbirdLive_min = {exports: {}};
 	    })), t.request(this, o, r).then(function (t) {
 	      a.dispatch(new J0({
 	        messages: [t],
-	        source: H0.EVENT_MESSAGE_SENT_SUCCESS
+	        source: G0.EVENT_MESSAGE_SENT_SUCCESS
 	      })), ae(function () {
 	        return re(s, void 0, void 0, function () {
 	          return ie(this, function (e) {
@@ -15937,7 +15945,7 @@ var sendbirdLive_min = {exports: {}};
 
 	        s._markMessageAsFailed(t, n, e), a.dispatch(new J0({
 	          messages: [t],
-	          source: t.sendingStatus === Sm.PENDING ? H0.REQUEST_RESEND_MESSAGE : H0.EVENT_MESSAGE_SENT_FAILED
+	          source: t.sendingStatus === Sm.PENDING ? G0.REQUEST_RESEND_MESSAGE : G0.EVENT_MESSAGE_SENT_FAILED
 	        })), ae(function () {
 	          return re(s, void 0, void 0, function () {
 	            return ie(this, function (e) {
@@ -16069,7 +16077,7 @@ var sendbirdLive_min = {exports: {}};
 	          case 1:
 	            return n = e.sent(), r = n.as(oS).message, t.dispatch(new J0({
 	              messages: [r],
-	              source: H0.EVENT_MESSAGE_UPDATED
+	              source: G0.EVENT_MESSAGE_UPDATED
 	            })), [2, r];
 	        }
 	      });
@@ -16187,7 +16195,7 @@ var sendbirdLive_min = {exports: {}};
 	          case 1:
 	            return n = e.sent(), r = n.as(sS).message, t.dispatch(new J0({
 	              messages: [r],
-	              source: H0.EVENT_MESSAGE_UPDATED
+	              source: G0.EVENT_MESSAGE_UPDATED
 	            })), [2, r];
 	        }
 	      });
@@ -17219,7 +17227,7 @@ var sendbirdLive_min = {exports: {}};
 	            try {
 	              for (n = se(t), r = n.next(); !r.done; r = n.next()) 0 === (i = r.value).errorCode && (this._logger.debug("cached pending message is not auto-resend registered. changing its sending status to failed: ", i.reqId), i.sendingStatus = Sm.FAILED, i.errorCode = d.ACK_TIMEOUT, this._dispatcher.dispatch(new J0({
 	                messages: [i],
-	                source: H0.LOCAL_MESSAGE_FAILED
+	                source: G0.LOCAL_MESSAGE_FAILED
 	              })));
 	            } catch (e) {
 	              s = {
@@ -17253,7 +17261,7 @@ var sendbirdLive_min = {exports: {}};
 	                return e.reqId;
 	              }).indexOf(i.reqId) < 0 && this._autoResendQueue.push(i) : (this._logger.debug("auto-resend registered pending messaged expired. expiration date: ", new Date(a).toLocaleString()), i.sendingStatus = Sm.FAILED, this._dispatcher.dispatch(new J0({
 	                messages: [i],
-	                source: H0.LOCAL_MESSAGE_FAILED
+	                source: G0.LOCAL_MESSAGE_FAILED
 	              }))));
 	            } catch (e) {
 	              o = {
@@ -17386,8 +17394,8 @@ var sendbirdLive_min = {exports: {}};
 	      DC = KC,
 	      MC = (o(BC, RC = ay), BC),
 	      xC = (o(VC, OC = zy), VC),
-	      LC = (o(HC, AC = h), HC),
-	      PC = (o(GC, NC = S), GC),
+	      LC = (o(GC, AC = h), GC),
+	      PC = (o(HC, NC = S), HC),
 	      UC = (o(jC, kC = h), jC),
 	      qC = (o(FC, CC = S), FC);
 
@@ -17405,12 +17413,12 @@ var sendbirdLive_min = {exports: {}};
 	    }, n;
 	  }
 
-	  function GC(e, t) {
+	  function HC(e, t) {
 	    e = NC.call(this, e, t) || this;
 	    return e.pushTriggerOption = t.push_trigger_option, e;
 	  }
 
-	  function HC(e) {
+	  function GC(e) {
 	    var e = e.userId,
 	        t = AC.call(this) || this;
 	    return t.method = T.GET, t.path = "".concat(ng, "/").concat(encodeURIComponent(e), "/push_preference"), t;
@@ -17641,13 +17649,13 @@ var sendbirdLive_min = {exports: {}};
 	      qk,
 	      Fk,
 	      jk,
-	      Gk,
 	      Hk,
+	      Gk,
 	      Vk,
 	      Bk,
 	      Kk = EN,
-	      Qk = (o(gN, Hk = S), gN),
-	      zk = (o(mN, Gk = h), mN),
+	      Qk = (o(gN, Gk = S), gN),
+	      zk = (o(mN, Hk = h), mN),
 	      Wk = (o(yN, jk = S), yN),
 	      Yk = (o(_N, Fk = h), _N),
 	      Xk = (o(vN, qk = S), vN),
@@ -17773,12 +17781,12 @@ var sendbirdLive_min = {exports: {}};
 
 	  function mN(e) {
 	    var e = e.userId,
-	        t = Gk.call(this) || this;
+	        t = Hk.call(this) || this;
 	    return t.method = T.GET, t.path = "".concat(ng, "/").concat(encodeURIComponent(e), "/channel_invitation_preference"), t;
 	  }
 
 	  function gN(e, t) {
-	    e = Hk.call(this, e, t) || this;
+	    e = Gk.call(this, e, t) || this;
 	    return e.pushTokens = {
 	      type: t.type ? xS[t.type.toLowerCase()] : xS.UNKNOWN,
 	      deviceTokens: t.device_tokens,
@@ -17835,8 +17843,8 @@ var sendbirdLive_min = {exports: {}};
 	      qN = (o(YN, ON = S), YN),
 	      FN = (o(WN, AN = h), WN),
 	      jN = (o(zN, NN = S), zN),
-	      GN = (o(QN, kN = h), QN),
-	      HN = (o(KN, CN = S), KN),
+	      HN = (o(QN, kN = h), QN),
+	      GN = (o(KN, CN = S), KN),
 	      VN = (o(BN, SN = h), BN);
 
 	  function BN(e) {
@@ -18023,8 +18031,8 @@ var sendbirdLive_min = {exports: {}};
 	      q1 = (o(_A, L1 = h), _A),
 	      F1 = (o(vA, x1 = S), vA),
 	      j1 = (o(pA, M1 = h), pA),
-	      G1 = (o(fA, D1 = S), fA),
-	      H1 = (o(dA, R1 = h), dA),
+	      H1 = (o(fA, D1 = S), fA),
+	      G1 = (o(dA, R1 = h), dA),
 	      V1 = (o(hA, O1 = S), hA),
 	      B1 = (o(lA, A1 = h), lA),
 	      K1 = (o(cA, N1 = S), cA),
@@ -18975,7 +18983,7 @@ var sendbirdLive_min = {exports: {}};
 	      jA = function (e, t) {
 	    return "".concat(FA(e), "/").concat(t);
 	  },
-	      GA = (HA.prototype._makeShards = function (e, t) {
+	      HA = (GA.prototype._makeShards = function (e, t) {
 	    var n = Math.max(this._store.itemSizeLimit - 1024, 0);
 
 	    if (0 < n) {
@@ -18994,7 +19002,7 @@ var sendbirdLive_min = {exports: {}};
 	      blobId: null,
 	      shards: null
 	    };
-	  }, HA.prototype._encode = function (n) {
+	  }, GA.prototype._encode = function (n) {
 	    return re(this, void 0, void 0, function () {
 	      return ie(this, function (e) {
 	        switch (e.label) {
@@ -19014,7 +19022,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA.prototype._decode = function (o) {
+	  }, GA.prototype._decode = function (o) {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i, s, a;
 	      return ie(this, function (e) {
@@ -19041,7 +19049,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA.prototype.get = function (a) {
+	  }, GA.prototype.get = function (a) {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i, s;
 	      return ie(this, function (e) {
@@ -19074,7 +19082,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA.prototype.save = function (o, u) {
+	  }, GA.prototype.save = function (o, u) {
 	    return void 0 === u && (u = "".concat(Date.now())), re(this, void 0, void 0, function () {
 	      var t, n, r, i, s, a;
 	      return ie(this, function (e) {
@@ -19106,7 +19114,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA.prototype.remove = function (s) {
+	  }, GA.prototype.remove = function (s) {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i;
 	      return ie(this, function (e) {
@@ -19126,7 +19134,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA.prototype.clear = function () {
+	  }, GA.prototype.clear = function () {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i, s, a, o, u;
 	      return ie(this, function (e) {
@@ -19158,9 +19166,9 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, HA);
+	  }, GA);
 
-	  function HA(e) {
+	  function GA(e) {
 	    var t = e.dbname,
 	        n = e.collectionName,
 	        e = e.store;
@@ -19208,7 +19216,7 @@ var sendbirdLive_min = {exports: {}};
 	    this._prevValue = void 0 === t ? null : t, this._nextValue = n, this._error = null, this._map = i, this._backward = s, this._forward = a, this._iterator = r, this._complete = e;
 	  }
 
-	  (Hn = MA = MA || {})[Hn.COMMIT = 0] = "COMMIT", Hn[Hn.WRITE = 1] = "WRITE", Hn[Hn.ERROR = 2] = "ERROR", (nt = xA = xA || {}).PENDING = "pending", nt.PERSISTENT = "persistent", nt.VOLATILE = "volatile", (mt = LA = LA || {})[mt.NO_CACHE = 0] = "NO_CACHE", mt[mt.DEFAULT = 1] = "DEFAULT", mt[mt.PERSISTENT = 2] = "PERSISTENT";
+	  (Gn = MA = MA || {})[Gn.COMMIT = 0] = "COMMIT", Gn[Gn.WRITE = 1] = "WRITE", Gn[Gn.ERROR = 2] = "ERROR", (nt = xA = xA || {}).PENDING = "pending", nt.PERSISTENT = "persistent", nt.VOLATILE = "volatile", (mt = LA = LA || {})[mt.NO_CACHE = 0] = "NO_CACHE", mt[mt.DEFAULT = 1] = "DEFAULT", mt[mt.PERSISTENT = 2] = "PERSISTENT";
 	  var QA = [xA.PENDING, xA.VOLATILE],
 	      zA = {},
 	      WA = (iO.get = function (e) {
@@ -21835,7 +21843,7 @@ var sendbirdLive_min = {exports: {}};
 	        a = this;
 	    this._state = yA.INIT, this._metadata = null, this._indexers = [], this.dbname = t, this.name = n, this.keyName = r, this.indexes = J_([[r]], X_(s.filter(function (e) {
 	      return ZA.createKey(e) !== a.keyName;
-	    })), !1), this._keyHash = i, this._store = e, this._mutex = new dO("".concat(jA(t, n), ".lock")), this._blobContainer = new GA({
+	    })), !1), this._keyHash = i, this._store = e, this._mutex = new dO("".concat(jA(t, n), ".lock")), this._blobContainer = new HA({
 	      dbname: t,
 	      collectionName: n,
 	      store: e
@@ -22310,7 +22318,7 @@ var sendbirdLive_min = {exports: {}};
 	  }), Object.defineProperty(R.prototype, "connectionState", {
 	    get: function () {
 	      var e = N.of(this._iid).connectionManager;
-	      return e.isConnected ? Gy.OPEN : e.isConnecting ? Gy.CONNECTING : Gy.CLOSED;
+	      return e.isConnected ? Hy.OPEN : e.isConnecting ? Hy.CONNECTING : Hy.CLOSED;
 	    },
 	    enumerable: !1,
 	    configurable: !0
@@ -23031,13 +23039,13 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return t = N.of(this._iid), n = t.sdkState, t = t.requestQueue, n = new GN({
+	            return t = N.of(this._iid), n = t.sdkState, t = t.requestQueue, n = new HN({
 	              userId: n.userId,
 	              discoveries: r
 	            }), [4, t.send(n)];
 
 	          case 1:
-	            return [2, e.sent().as(HN).friendDiscoveryRequestId];
+	            return [2, e.sent().as(GN).friendDiscoveryRequestId];
 	        }
 	      });
 	    });
@@ -23125,7 +23133,7 @@ var sendbirdLive_min = {exports: {}};
 	            }), [4, t.send(n)];
 
 	          case 1:
-	            return [2, e.sent().as(G1).emojiCategory];
+	            return [2, e.sent().as(H1).emojiCategory];
 	        }
 	      });
 	    });
@@ -23135,7 +23143,7 @@ var sendbirdLive_min = {exports: {}};
 	      return ie(this, function (e) {
 	        switch (e.label) {
 	          case 0:
-	            return t = N.of(this._iid).requestQueue, n = new H1({
+	            return t = N.of(this._iid).requestQueue, n = new G1({
 	              key: r
 	            }), [4, t.send(n)];
 
@@ -23262,8 +23270,8 @@ var sendbirdLive_min = {exports: {}};
 	      qO = $O,
 	      FO = (o(ZO, UO = zy), ZO),
 	      jO = (o(JO, PO = FO), JO),
-	      GO = (o(XO, LO = zy), XO),
-	      HO = (o(YO, xO = zy), YO),
+	      HO = (o(XO, LO = zy), XO),
+	      GO = (o(YO, xO = zy), YO),
 	      VO = (o(WO, MO = zy), WO),
 	      BO = (o(zO, DO = zy), zO),
 	      KO = (o(QO, RO = zy), QO);
@@ -23551,8 +23559,8 @@ var sendbirdLive_min = {exports: {}};
 	          F,
 	          j,
 	          s,
-	          G,
 	          H,
+	          G,
 	          h,
 	          i,
 	          d,
@@ -23628,7 +23636,7 @@ var sendbirdLive_min = {exports: {}};
 	            return [3, 50];
 
 	          case 1:
-	            return t = null, "MESG" === ne.code ? t = ne.as(rS) : "FILE" === ne.code ? t = ne.as(k0) : "ADMM" !== ne.code && "BRDM" != ne.code || (t = ne.as(HO)), t ? (a = t.message, U = t.isMentioned, a.channelType !== ym.OPEN ? [3, 3] : [4, this.getChannel(a.channelUrl, !0)]) : [3, 3];
+	            return t = null, "MESG" === ne.code ? t = ne.as(rS) : "FILE" === ne.code ? t = ne.as(k0) : "ADMM" !== ne.code && "BRDM" != ne.code || (t = ne.as(GO)), t ? (a = t.message, U = t.isMentioned, a.channelType !== ym.OPEN ? [3, 3] : [4, this.getChannel(a.channelUrl, !0)]) : [3, 3];
 
 	          case 2:
 	            o = e.sent(), ae(function () {
@@ -23751,12 +23759,12 @@ var sendbirdLive_min = {exports: {}};
 	            return (s = ne.as(KO).event).channelType !== ym.OPEN ? [3, 15] : [4, this.getChannel(s.channelUrl, !0)];
 
 	          case 14:
-	            G = e.sent(), ae(function () {
+	            H = e.sent(), ae(function () {
 	              return re(P, void 0, void 0, function () {
 	                var t, n, r, i;
 	                return ie(this, function (e) {
 	                  try {
-	                    for (t = se(this._openChannelHandlers.values()), n = t.next(); !n.done; n = t.next()) n.value.onThreadInfoUpdated(G, s);
+	                    for (t = se(this._openChannelHandlers.values()), n = t.next(); !n.done; n = t.next()) n.value.onThreadInfoUpdated(H, s);
 	                  } catch (e) {
 	                    r = {
 	                      error: e
@@ -23778,10 +23786,10 @@ var sendbirdLive_min = {exports: {}};
 	            return [3, 50];
 
 	          case 16:
-	            H = ne.as(GO).openChannelMemberCounts, h = [], e.label = 17;
+	            G = ne.as(HO).openChannelMemberCounts, h = [], e.label = 17;
 
 	          case 17:
-	            e.trys.push([17, 22, 23, 24]), i = se(H), d = i.next(), e.label = 18;
+	            e.trys.push([17, 22, 23, 24]), i = se(G), d = i.next(), e.label = 18;
 
 	          case 18:
 	            return d.done ? [3, 21] : (p = d.value, f = p.channelUrl, E = p.participantCount, p = p.updatedAt, [4, this.getChannelFromCache(f)]);
@@ -24108,10 +24116,10 @@ var sendbirdLive_min = {exports: {}};
 	    operatorUserIds: null
 	  },
 	      DR = (o(VR, gR = h), VR),
-	      MR = (o(HR, mR = S), HR),
-	      xR = (o(GR, yR = hs), GR.prototype._validate = function () {
+	      MR = (o(GR, mR = S), GR),
+	      xR = (o(HR, yR = hs), HR.prototype._validate = function () {
 	    return yR.prototype._validate.call(this);
-	  }, GR.prototype.next = function () {
+	  }, HR.prototype.next = function () {
 	    return re(this, void 0, void 0, function () {
 	      var t, n, r, i;
 	      return ie(this, function (e) {
@@ -24141,7 +24149,7 @@ var sendbirdLive_min = {exports: {}};
 	        }
 	      });
 	    });
-	  }, GR),
+	  }, HR),
 	      LR = (o(jR, _R = h), jR),
 	      PR = (o(FR, vR = S), FR),
 	      UR = (o(qR, pR = h), qR);
@@ -24175,11 +24183,11 @@ var sendbirdLive_min = {exports: {}};
 	    }), t;
 	  }
 
-	  function GR(e, t, n) {
+	  function HR(e, t, n) {
 	    return yR.call(this, e, t, ym.OPEN, n) || this;
 	  }
 
-	  function HR(t, e) {
+	  function GR(t, e) {
 	    var n = mR.call(this, t, e) || this,
 	        r = (n.token = null, n.participants = [], e.next),
 	        e = e.participants;
