@@ -1,5 +1,9 @@
 # Change Log
 
+### 1.0.0-beta.5 (Sep 11, 2023 UTC)
+- Bump the version of dependencies.
+- Fixed the bug that the select components in device settings is not updated.
+
 ### v1.0.0-beta.4 (May 10, 2023 UTC)
 - Bump the version of dependencies.
 
